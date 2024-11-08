@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, lazy } from 'react';
 import Image from 'next/image';
 import { isEmpty, isArray, throttle } from 'lodash';
 
@@ -82,6 +82,8 @@ const GalleryCarousel = ({ gallery }) => {
                                 loading="lazy"
                                 placeholder="blur"
                                 blurDataURL={item.blurDataURL || gallery[activeIndex].mediaItemUrl}
+
+                                quality={20}
                             />
                         </div>
                     ))}
@@ -108,6 +110,7 @@ const GalleryCarousel = ({ gallery }) => {
                                     loading={index === activeIndex ? 'eager' : 'lazy'}
                                     placeholder="blur"
                                     blurDataURL={item.blurDataURL || gallery[activeIndex].mediaItemUrl}
+                                    quality={20}
                                 />
                             </div>
                         ))}
@@ -118,9 +121,10 @@ const GalleryCarousel = ({ gallery }) => {
                         alt="Main gallery image"
                         fill
                         style={{ objectFit: 'cover' }}
-                        priority
+                        loading={lazy}
                         placeholder="blur"
                         blurDataURL={gallery[activeIndex].blurDataURL || gallery[activeIndex].mediaItemUrl}
+                        quality={90}
                     />
                 )}
 
