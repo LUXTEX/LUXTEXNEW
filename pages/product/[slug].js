@@ -101,7 +101,7 @@ export default function Product({ product }) {
   );
 }
 
-export async function getStaticProps({ params: { slug } }) {
+export async function getServerSideProps({ params: { slug } }) {
   const { data } = await client.query({
     query: PRODUCT_BY_SLUG_QUERY,
     variables: { slug },
@@ -111,21 +111,5 @@ export async function getStaticProps({ params: { slug } }) {
     props: {
       product: data?.product || {},
     },
-    revalidate: 1,
-  };
-}
-
-export async function getStaticPaths() {
-  const { data } = await client.query({
-    query: PRODUCT_SLUGS,
-  });
-
-  const paths = data?.products?.nodes?.map((product) => ({
-    params: { slug: product?.slug },
-  })) || [];
-
-  return {
-    paths,
-    fallback: true,
   };
 }
