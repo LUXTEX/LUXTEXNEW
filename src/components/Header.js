@@ -13,7 +13,7 @@ const Header = () => {
   className={
     scroll
       ? " backdrop-blur-14 w-full fixed z-50 duration-500 ease-in-out py-0 shadow top-0"
-      : "backdrop-blur-14 w-full fixed duration-500 ease-in-out shadow top-0"
+      : "backdrop-blur-14 w-full fixed z-10 duration-500 ease-in-out shadow top-0"
   }
 >
   <Nav />

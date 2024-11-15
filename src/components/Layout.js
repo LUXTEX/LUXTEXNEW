@@ -15,16 +15,16 @@ const Layout = (props) => {
   
   return (
  
-   
-   
+   <>
+    <Header />
         <div className="wrapper">
           
-          <Header />
+         
         
           {props.children}
           <Footer />
         </div>
-  
+        </>
   );
 };
 

@@ -28,7 +28,7 @@ export default function Product({ product }) {
         <div className="single-product container mx-auto my-32 xl:px-0">
           <div className="grid md:grid-cols-2 gap-4">
             {/* Product Images */}
-            <div className="product-images relative -z-10">
+            <div className="product-images relative ">
               {!isEmpty(product?.galleryImages?.nodes) ? (
                 <GalleryCarousel gallery={product?.galleryImages?.nodes} />
               ) : !isEmpty(product.image) ? (
