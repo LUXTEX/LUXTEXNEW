@@ -30,7 +30,7 @@ const HeroCarousel = ({ heroCarousel }) => {
             return () => clearInterval(interval);
         }
     }, []);
-
+    console.log(heroCarousel)
     return (
         <div className="banner banner_home_page relative m-auto slidervh slider-color">
             <div className="marquee font-playfair font-bold">
@@ -48,7 +48,7 @@ const HeroCarousel = ({ heroCarousel }) => {
                         <Image
                             className="h-full w-full object-cover"
                             alt={item?.name || 'Carousel image'}
-                            src={item?.image?.sourceUrl}
+                            src={item?.children.nodes.image?.sourceUrl}
                             srcSet={item?.image?.srcSet}
                             width={1000}
                             height={500}

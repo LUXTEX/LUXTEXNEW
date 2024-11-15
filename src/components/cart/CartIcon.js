@@ -18,7 +18,7 @@ const CartIcon = () => {
     return (
         <Link href="/cart">
             <div className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10 relative">
-                <svg xmlns="http://www.w3.org/2000/svg" className="hidden lg:block m-auto" fill="none" viewBox="0 0 24 24" width="40" height="40" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" className="hidden lg:block m-auto" fill="none" viewBox="0 0 24 24" width="40" height="40"  stroke="white">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="0.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
                 </svg>
                 {productsCount > 0 && (

@@ -76,13 +76,14 @@ export default function Home(props) {
             </Head>
 
             <Layout productTags={productTags} preloadImages={images}>
-		{/*	<HeroCarousel heroCarousel={heroCarousel} />*/}
+            
+			{/*<HeroCarousel heroCarousel={heroCarousel} />*/}
                 <div className="main container mx-auto">
                     {/* Hero Carousel */}
                    
 
                     {/* Description */}
-                    <div className="text-justify px-3 pt-20 pb-20">
+                    <div className="text-justify px-3 pt-20 pb-20 mt-20">
                         <h1 className="text-3xl  font-extrabold mb-10 leading-normal text-center uppercase">
                             Постільна білизна від виробника LUXTEX
                         </h1>
@@ -306,7 +307,7 @@ export async function getStaticProps() {
             productTags: data?.productTags?.nodes || [],
             products: data?.products?.nodes || [],
             featuredproducts: data?.featuredproducts?.nodes || [],
-        
+          
            
         },
         revalidate: 1,
