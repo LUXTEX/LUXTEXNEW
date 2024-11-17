@@ -29,9 +29,9 @@ const Product = (props) => {
                 <Link href={`/product/${product?.slug}`}>
                     <div className="relative overflow-hidden group"> {/* Добавили overflow-hidden и group */}
                         <Image
-                            className="object-cover bg-gray-100 lg:h-64 lg:w-64 h-48 w-48 transition-transform duration-300 ease-in-out transform group-hover:scale-110" // Добавили эффект увеличения
-                            width={300} // Уменьшено для миниатюры
-                            height={300}
+                            className="object-cover bg-gray-100 lg:h-72 lg:w-72 h-52 w-52 transition-transform duration-300 ease-in-out transform group-hover:scale-110" // Добавили эффект увеличения
+                            width={400} // Уменьшено для миниатюры
+                            height={400}
                             quality={40} // Снижено качество для ускоренной загрузки
                             loading='lazy'
                             sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
