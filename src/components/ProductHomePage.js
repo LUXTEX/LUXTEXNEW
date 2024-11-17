@@ -44,7 +44,7 @@ const Product = (props) => {
                             width={300} // Уменьшено для миниатюры
                             height={300}
                             quality={40} // Снижено качество для ускоренной загрузки
-                            priority={true} // Установите true для первых изображений на странице
+                            loading='lazy'
                             sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
                             src={product?.image?.sourceUrl ?? DEFAULT_PRODUCT_HOME_IMG_URL}
                             alt={product.name}
