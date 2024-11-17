@@ -8,7 +8,7 @@ const Product = (props) => {
     const { product } = props;
     const texts = ['Супер ціна', 'black friday !', '-10%'];
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [isLoading, setIsLoading] = useState(true);
+ 
 
     useEffect(() => {
         if (texts.length > 0) {
@@ -19,23 +19,12 @@ const Product = (props) => {
         }
     }, [texts.length]);
 
-    const handleImageLoad = () => {
-        setIsLoading(false);
-    };
+  
 
     return (
         product && product.__typename !== 'GroupProduct' ? (
             <div className="product mb-5 relative bg-white rounded-sm overflow-hidden"> {/* Добавили overflow-hidden */}
-                {isLoading && (
-                    <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-70 z-10">
-                        <img
-                            src="https://aimg.kwcdn.com/upload_aimg/pic/2d341ad7-de86-44b8-bf6f-7b01af40f7c9.gif?imageView2/2/w/40/q/60"
-                            alt="Loading..."
-                            width={20}
-                            height={20}
-                        />
-                    </div>
-                )}
+              
 
                 <Link href={`/product/${product?.slug}`}>
                     <div className="relative overflow-hidden group"> {/* Добавили overflow-hidden и group */}
@@ -48,7 +37,7 @@ const Product = (props) => {
                             sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
                             src={product?.image?.sourceUrl ?? DEFAULT_PRODUCT_HOME_IMG_URL}
                             alt={product.name}
-                            onLoad={handleImageLoad}
+                        
                             placeholder="blur"
                             blurDataURL="/path/to/placeholder.jpg" // Используйте путь к размытой версии
                         />
