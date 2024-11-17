@@ -2,7 +2,7 @@ const path = require("path");
 const allowedImageWordPressDomain = new URL(process.env.NEXT_PUBLIC_WORDPRESS_URL).hostname;
 
 module.exports = {
-  
+ 
   webpack: (config) => {
     config.experiments = { asyncWebAssembly: true, layers: true };
     return config;
