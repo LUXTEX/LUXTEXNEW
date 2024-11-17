@@ -9,7 +9,7 @@ const Product = (props) => {
     const texts = ['Супер ціна', 'black friday !', '-10%'];
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isLoading, setIsLoading] = useState(true);
-
+  {/*  sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"*/}
     useEffect(() => {
         if (texts.length > 0) {
             const interval = setInterval(() => {
@@ -45,7 +45,7 @@ const Product = (props) => {
                             height={300}
                             quality={40} // Снижено качество для ускоренной загрузки
                             priority={true} // Установите true для первых изображений на странице
-                            sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
+                        
                             src={product?.image?.sourceUrl ?? DEFAULT_PRODUCT_HOME_IMG_URL}
                             alt={product.name}
                             onLoad={handleImageLoad}

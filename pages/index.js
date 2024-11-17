@@ -82,7 +82,7 @@ export default function Home(props) {
                     {/* Hero Carousel */}
                    
 
-                    {/* Description 
+                    {/* Description */}
                     <div className="text-justify px-3 pt-20 pb-20 mt-20">
                         <h1 className="text-3xl  font-extrabold mb-10 leading-normal text-center uppercase">
                             Постільна білизна від виробника LUXTEX
